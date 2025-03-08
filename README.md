@@ -1,30 +1,36 @@
-# {{param `github.repo` | replace `-` ` ` | titlecase}}
-{{param `description` `` `Project description: `}}
+# Trusted Shops Scraper
 
-Tags: {{param `tags` `` `Project tags: `}}
+## Overview
 
-*Note: This project has been generated using the following [templating system](./TEMPLATE.md)*
+This project is a web scraper that extracts shop data from Trusted Shops, focusing on retrieving owner-listed businesses. The extracted data is processed and stored in a Google Sheet for further analysis.
 
-## Table of Contents
-- [{{param `github.repo` | replace `-` ` ` | titlecase}}](#param-githubrepo--replace------titlecase)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Author](#author)
+## Features
+
+- **Cheerio for HTML Parsing:** Extracts shop details efficiently.
+- **Pagination Handling:** Automatically navigates through multiple pages.
+- **Error Handling & Logging:** Detects and manages errors during scraping.
+- **Google Sheets Integration:** Saves extracted data for further use.
+
+## Anti-Bot Systems We Handle
+
+- **Rate Limiting & Blocking:** Avoids detection by mimicking human-like requests.
+- **Cloudflare Protection:** Bypasses basic anti-bot mechanisms.
+- **Structured Data Extraction:** Uses JSON-LD scripts to retrieve reliable data.
+
+## Why This Project is Useful
+
+- Helps businesses track online shop listings efficiently.
+- Provides valuable data for market research and e-commerce analysis.
+- Automates the collection of shop details, saving time and effort.
 
 ## Installation
-Follow the steps detailed [here](./INSTALL.md).
 
+```sh
+npm install axios cheerio
+```
 ## Usage
-Find the usage patterns [here](./USAGE.md).
 
-## Contributing
-To contribute, follow the guidelines detailed [here](./CONTRIBUTE.md).
+```sh
+npm start
+```
 
-## License
-This project is licensed under the [MIT License](./LICENSE).
-
-## Author
-{{param `git.name`}}<<{{param `git.email`}}>>
